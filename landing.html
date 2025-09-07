@@ -27,6 +27,7 @@
             z-index: 1000;
             padding: 8px 0;
             transition: all 0.3s ease;
+            font-family: 'Anta', sans-serif;
         }
 
         .nav-container {
@@ -37,11 +38,19 @@
             align-items: center;
             padding: 0 2rem;
         }
+
+        @font-face{
+            font-family: 'Anta';
+            src: url('/fonts/Anta-Regular.woff2') format('woff2'),
+                 url('/fonts/Anta-Regular.woff') format('woff');
+            font-weight: 200;
+        }
         .highlight{
           background: -webkit-linear-gradient(#6e80e9,#1e3a8a);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          font-size: 58px;
+          /* font-size: 58px; */
+          font-family: 'Anta', sans-serif;
         }
         .logo {
             font-size: 1.8rem;
@@ -63,7 +72,7 @@
         }
 
         .nav-links a:hover {
-            color: #1e3a8a;
+            color: #52becc;
         }
 
         .mobile-menu {
@@ -91,6 +100,7 @@
             color: white;
             position: relative;
             overflow: hidden;
+            font-family: 'Anta', sans-serif;
         }
 
         .hero::before {
@@ -354,6 +364,14 @@
                 padding: 2rem;
                 gap: 1rem;
             }
+            .cta-button{
+                width: 200px;
+                height: auto;
+            }
+            #logo-spk{
+                width: 180px;
+                height: auto;
+            }
 
             .nav-links.active {
                 display: flex;
@@ -418,7 +436,7 @@
         <div class="nav-container">
             <a href="#home" class="logo">SPK</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Login Voucher</a></li>
+                <li><a href="index.html">Login Voucher</a></li>
                 <li><a href="#pricing">Harga</a></li>
                 <li><a href="#subscription">Subscription</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -435,8 +453,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <img src="img/logo-spk.png" alt="" width="450px;">
-            <h1>SPK</h1>
+            <img src="img/logo-spk.png" alt="" width="450px;" id="logo-spk" style="margin-bottom: 1rem;">
+            <!-- <h1>SPK</h1> -->
             <p>Mendukung Transformasi Digital Melalui Internet Cepat Dimana Saja</p>
             <a href="#contact" class="cta-button">Hubungi Kami</a>
         </div>
@@ -490,9 +508,9 @@
     </section>
 
     <!-- Subscription Section -->
-    <section id="subscription" class="section">
+    <section id="subscription" class="section" style="background: #1b1b1b;">
         <div class="container">
-            <h2 class="section-title">Layanan <span class="highlight">Subscription</span></h2>
+            <h2 class="section-title" style="color: #efefef;">Layanan <span class="highlight">Subscription</span></h2>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Monthly Maintenance</h3>
@@ -612,8 +630,9 @@
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(71, 71, 71, 0.95);';
+            if (window.scrollY) {
+                navbar.style.background = 'rgba(71, 71, 71, 0.95)';
+                navbar.style.opacity = 20;
             } else {
                 navbar.style.background = 'rgba(0, 0, 0, 0.95)';
             }
