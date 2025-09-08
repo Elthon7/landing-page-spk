@@ -428,13 +428,47 @@
                 padding: 0 1rem;
             }
         }
+
+    .conveyor-logos {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      border: 2px solid #444;
+      background: #616060;
+      opacity: 0.5;
+      padding: 20px 0;
+    }
+
+    .logos {
+      display: inline-block;
+      animation: move 15s linear infinite;
+    }
+
+    .logos img {
+      height: 60px;
+      margin: 0 40px;
+      vertical-align: middle;
+      filter: brightness(0) invert(1); /* efek putih di background gelap */
+    }
+
+    @keyframes move {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">SPK</a>
+            <div>
+                <img src="img/wifi.png" alt="" width="30px;" style="filter: invert(1); margin: 0;">
+                <a href="#home" class="logo">SPK</a>
+            </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Login Voucher</a></li>
                 <li><a href="#pricing">Harga</a></li>
@@ -460,55 +494,69 @@
         </div>
     </section>
 
+    <div class="conveyor-logos">
+        <div class="logos">
+            <img src="img/ruijie.png" alt="">
+            <img src="img/unifi.png" alt="">
+            <img src="img/tplink.png" alt="">
+            <img src="img/logo-spk.png" alt="">
+            
+            <img src="img/ruijie.png" alt="">
+            <img src="img/unifi.png" alt="">
+            <img src="img/tplink.png" alt="">
+            <img src="img/logo-spk.png" alt="">
+        </div>
+    </div>
+
     <!-- Pricing Section -->
     <section id="pricing" class="section">
-        <div class="container">
-            <h2 class="section-title">Harga <span class="highlight">Voucher</span></h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$299</div>
-                    <ul class="features">
-                        <li>Basic Website Design</li>
-                        <li>Mobile Responsive</li>
-                        <li>3 Page Website</li>
-                        <li>Basic SEO Setup</li>
-                        <li>Email Support</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Choose Plan</a>
-                </div>
-                <div class="pricing-card featured">
-                    <h3>Professional</h3>
-                    <div class="price">$799</div>
-                    <ul class="features">
-                        <li>Custom Website Design</li>
-                        <li>Up to 10 Pages</li>
-                        <li>Advanced SEO</li>
-                        <li>Social Media Integration</li>
-                        <li>Priority Support</li>
-                        <li>Analytics Setup</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Choose Plan</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$1999</div>
-                    <ul class="features">
-                        <li>Full-Stack Development</li>
-                        <li>Unlimited Pages</li>
-                        <li>E-commerce Integration</li>
-                        <li>Custom Features</li>
-                        <li>24/7 Support</li>
-                        <li>Maintenance Included</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Choose Plan</a>
+            <div class="container">
+                <h2 class="section-title">Harga <span class="highlight">Voucher</span></h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Starter</h3>
+                        <div class="price">$299</div>
+                        <ul class="features">
+                            <li>Basic Website Design</li>
+                            <li>Mobile Responsive</li>
+                            <li>3 Page Website</li>
+                            <li>Basic SEO Setup</li>
+                            <li>Email Support</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Plan</a>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h3>Professional</h3>
+                        <div class="price">$799</div>
+                        <ul class="features">
+                            <li>Custom Website Design</li>
+                            <li>Up to 10 Pages</li>
+                            <li>Advanced SEO</li>
+                            <li>Social Media Integration</li>
+                            <li>Priority Support</li>
+                            <li>Analytics Setup</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Plan</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">$1999</div>
+                        <ul class="features">
+                            <li>Full-Stack Development</li>
+                            <li>Unlimited Pages</li>
+                            <li>E-commerce Integration</li>
+                            <li>Custom Features</li>
+                            <li>24/7 Support</li>
+                            <li>Maintenance Included</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Choose Plan</a>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Subscription Section -->
-    <section id="subscription" class="section" style="background: #1b1b1b;">
+    <section id="subscription" class="section" style="background: #1b1b1b; box-shadow: #1e40af 0px 10px 30px;">
         <div class="container">
             <h2 class="section-title" style="color: #efefef;">Layanan <span class="highlight">Subscription</span></h2>
             <div class="pricing-grid">
